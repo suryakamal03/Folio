@@ -5,12 +5,13 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
-  const toggleTheme = () => {
-  const audio = new Audio('/public/mixkit-classic-click-1117.wav');
+const toggleTheme = () => {
+  const audio = new Audio('/mixkit-classic-click-1117.wav'); // no /public here
   audio.volume = 1; // Adjust volume
   audio.play();
   setTheme(theme === 'light' ? 'dark' : 'light');
 };
+
 
 
   return (
