@@ -6,8 +6,12 @@ export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
+  const audio = new Audio('/public/mixkit-classic-click-1117.wav');
+  audio.volume = 1; // Adjust volume
+  audio.play();
+  setTheme(theme === 'light' ? 'dark' : 'light');
+};
+
 
   return (
     <Button
