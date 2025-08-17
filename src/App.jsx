@@ -46,7 +46,7 @@ function App() {
             <p className="text-gray-300 pointer-events-none">|</p>
 
             <Tooltip>
-              <TooltipTrigger><a href="../public/Resume.pdf" download><FileDown size={18} strokeWidth={1.5} className="text-gray-500 hover:text-black cursor-pointer dark:hover:text-white animate-slide-up [animation-duration:.6s]"/></a></TooltipTrigger>
+              <TooltipTrigger><a href="/Resume.pdf" download><FileDown size={18} strokeWidth={1.5} className="text-gray-500 hover:text-black cursor-pointer dark:hover:text-white animate-slide-up [animation-duration:.6s]"/></a></TooltipTrigger>
               <TooltipContent><p>Resume</p></TooltipContent>
             </Tooltip>
             </div>
@@ -172,7 +172,7 @@ function App() {
             <p className="text-gray-300 pointer-events-none">|</p>
 
             <Tooltip>
-              <TooltipTrigger><a href="../public/Resume.pdf" download><FileDown size={18} strokeWidth={1.5} className="text-gray-500 hover:text-black cursor-pointer dark:hover:text-white"/></a></TooltipTrigger>
+              <TooltipTrigger><a href="/Resume.pdf" download><FileDown size={18} strokeWidth={1.5} className="text-gray-500 hover:text-black cursor-pointer dark:hover:text-white"/></a></TooltipTrigger>
               <TooltipContent><p>Resume</p></TooltipContent>
             </Tooltip>  
               </div>
