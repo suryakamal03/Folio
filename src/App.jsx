@@ -137,7 +137,7 @@ function App() {
           {/* Cryptvault  */}
 
            <div className="items-center animate-slide-up [animation-duration:.7s]">
-          <div className="group rounded-xl w-full border-2 border-gray-400 dark:border-neutral-800 flex justify-center items-start flex-col px-5 py-6 m-2 hover:border-black dark:hover:border-neutral-400 transition-all duration-200 cursor-pointer" onClick={()=>window.open("https://dashboard-one-pi.vercel.app/","_blank")}>
+          <div className="group rounded-xl w-full border-2 border-gray-400 dark:border-neutral-800 flex justify-center items-start flex-col px-5 py-6 m-2 hover:border-black dark:hover:border-neutral-400 transition-all duration-200 cursor-pointer" onClick={()=>window.open("https://cryptvault.vercel.app/","_blank")}>
         <div className="flex items-center justify-between w-full">
        <div className="flex">
         <p className="text-black font-bold mb-3 dark:text-neutral-50">CryptVault</p>
