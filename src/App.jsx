@@ -4,9 +4,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { FaHtml5,FaCss3Alt,FaNodeJs } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaReact } from "react-icons/fa6";
-import { SiMongodb,SiExpress,SiTailwindcss ,SiFirebase} from "react-icons/si";
+import { SiMongodb,SiExpress,SiTailwindcss ,SiFirebase,SiCloudinary} from "react-icons/si";
 import { ThemeProvider } from "@/components/theme-provider"
 import { ModeToggle } from "./components/mode-toggle";
+import { RiTailwindCssFill } from "react-icons/ri";
 
 function App() {
   return (
@@ -132,7 +133,33 @@ function App() {
         <div className="">
           <p className="text-lg font-bold text-gray-950 pointer-events-none dark:text-neutral-300 animate-slide-up [animation-duration:.7s]">Personal Projects</p>
           <div className="mt-5 grid grid-row sm:grid-row md:grid-row gap-1">
+
+          {/* Cryptvault  */}
+
            <div className="items-center animate-slide-up [animation-duration:.7s]">
+          <div className="group rounded-xl w-full border-2 border-gray-400 dark:border-neutral-800 flex justify-center items-start flex-col px-5 py-6 m-2 hover:border-black dark:hover:border-neutral-400 transition-all duration-200 cursor-pointer" onClick={()=>window.open("https://dashboard-one-pi.vercel.app/","_blank")}>
+        <div className="flex items-center justify-between w-full">
+       <div className="flex">
+        <p className="text-black font-bold mb-3 dark:text-neutral-50">CryptVault</p>
+        <span className="flex bg-gray-100 justify-center rounded-2xl px-2 h-5 text-xs ml-2 dark:bg-neutral-800">Maintained</span>
+        </div>
+      <ArrowUpRight className="w-5 transition-transform duration-200 group-hover:rotate-[45deg]" />
+        </div>
+          <p className="text-sm text-gray-700 dark:text-zinc-300 animate-slide-up [animation-duration:.8s]">A secure file storage platform built with the MERN stack. Features user authentication with JWT, drag-and-drop file uploads, cloud storage integration, and a modern React interface with Tailwind CSS.</p>
+          <div className="mt-2 flex gap-2">
+            <SiMongodb className="text-gray-500 dark:text-white" />
+            <FaReact className="text-gray-500 dark:text-white" />
+            <SiExpress className="text-gray-500 dark:text-white" />
+            <FaNodeJs className="text-gray-500 dark:text-white" />
+            <RiTailwindCssFill className="text-gray-500 dark:text-white" />
+            <SiCloudinary className="text-gray-500 dark:text-white" />
+          </div>
+        </div>
+      </div>
+
+    {/* personal dashboard */}
+
+         <div className="items-center animate-slide-up [animation-duration:.7s]">
           <div className="group rounded-xl w-full border-2 border-gray-400 dark:border-neutral-800 flex justify-center items-start flex-col px-5 py-6 m-2 hover:border-black dark:hover:border-neutral-400 transition-all duration-200 cursor-pointer" onClick={()=>window.open("https://dashboard-one-pi.vercel.app/","_blank")}>
         <div className="flex items-center justify-between w-full">
        <div className="flex">
@@ -150,6 +177,8 @@ function App() {
           </div>
         </div>
       </div>
+
+
           </div>
         </div>
         <div className="border-1 border-gray-100 w-full h-0 mt-5 mb-5 ml-2 dark:border-neutral-500"></div>  
