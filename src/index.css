@@ -137,3 +137,8 @@
   opacity: 0; /* Start hidden */
   animation: slide-up .6s ease-out forwards;
 }
+@layer base {
+  ::selection {
+    @apply bg-gray-100 text-gray-900;
+  }
+}
