@@ -66,7 +66,7 @@ function App() {
         <div className="">
           <p className="text-lg font-bold text-gray-950 pointer-events-none dark:text-neutral-300 animate-slide-up [animation-duration:.65s]">Tech Stack</p>
           <div className="mt-5 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 gap-1">
-          <div className="flex flex-col items-center animate-slide-up [animation-duration:.7s]"> 
+          {/* <div className="flex flex-col items-center animate-slide-up [animation-duration:.7s]"> 
             <div className="border rounded-xl w-16 h-16 border-black flex justify-center items-center m-2 dark:border-neutral-400 ">
               <FaHtml5 className="text-3xl" />
             </div>
@@ -77,7 +77,7 @@ function App() {
               <FaCss3Alt className="text-3xl" />
             </div>
               <p className="text-sm font-medium pointer-events-none">CSS</p>
-          </div>
+          </div> */}
           <div className="flex flex-col items-center animate-slide-up [animation-duration:.7s]">
             <div className="border rounded-xl w-16 h-16 border-black flex justify-center items-center m-2 dark:border-neutral-400  ">
               <IoLogoJavascript className="text-3xl" />
