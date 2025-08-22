@@ -8,7 +8,7 @@ export function ModeToggle() {
 const toggleTheme = () => {
   const audio = new Audio('/mixkit-on-or-off-light-switch-tap-2585.wav'); // no /public here
   audio.volume = 1; 
-  audio.currentTime = 0.1;
+  // audio.currentTime = 0.1;
   audio.play();
   setTheme(theme === 'light' ? 'dark' : 'light');
 };
