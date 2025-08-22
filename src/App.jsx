@@ -64,7 +64,7 @@ function App() {
         </div>
         <div className="border-1 border-gray-100 w-full h-0 mt-5 mb-5 ml-2 dark:border-neutral-500"></div>
         <div className="">
-          <p className="text-lg font-bold text-gray-950 pointer-events-none dark:text-neutral-300 animate-slide-up [animation-duration:.65s]">Tech Stack</p>
+          <p className="text-lg font-bold text-gray-950 pointer-events-none dark:text-neutral-300 animate-slide-up [animation-duration:.65s]">Skills</p>
           <div className="mt-5 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 gap-1">
           {/* <div className="flex flex-col items-center animate-slide-up [animation-duration:.7s]"> 
             <div className="border rounded-xl w-16 h-16 border-black flex justify-center items-center m-2 dark:border-neutral-400 ">
