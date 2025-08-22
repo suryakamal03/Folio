@@ -17,7 +17,7 @@ const toggleTheme = () => {
 
   return (
   <Button
-    variant="ghost"
+    variant=""
     size="icon"
     onClick={toggleTheme}
     aria-label="Toggle theme"
