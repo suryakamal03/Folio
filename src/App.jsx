@@ -57,8 +57,8 @@ function App() {
           </div>
         </div>
         <div className="mt-20 mr-0 sm:mr-15">
-          {/* <p className="text-sm font-medium">I'm a Full-Stack Developer focused on building modern, secure, and optimized web apps.</p> */}
-          {/* <br /> */}
+          <p className="text-sm font-medium">I'm a Full-Stack Developer focused on building modern, secure, and optimized web apps.</p>
+          <br />
           <p className="text-sm font-medium animate-slide-up [animation-duration:.5s]"> I strive for continuous learning and improvement, always seeking innovative ways to refine my skills and knowledge.</p>
           <p  className="text-sm font-medium mt-2 animate-slide-up [animation-duration:.6s]">Currently pursuing my BCA at SRM Institute of Science and Technology,</p>
         </div>
