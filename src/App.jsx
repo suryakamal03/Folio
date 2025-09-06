@@ -139,20 +139,96 @@ function App() {
 
           {/* Cryptvault  */}
             {readMore && (
-              <div className="fixed inset-0  bg-opacity-10 backdrop-blur-sm flex items-center justify-center z-50">
-                  <div className="bg-white rounded-lg p-6 w-96 max-w-md border border-gray-300">
-                    <div className="flex justify-between items-center mb-4">
-                      <h2 className="text-xl font-bold">Crypt Vault</h2>
-                      <button 
-                      onClick={() => setreadMore(false)}
-                    className="text-gray-500 hover:text-gray-700 text-xl"
-              >
-                ✕
-              </button>
-                    </div>
-                  </div>
-              </div>
-            )}
+  <div className="fixed inset-0  bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+    <div className="bg-white dark:bg-neutral-900 rounded-xl p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto border border-gray-200 dark:border-neutral-700">
+      <div className="flex justify-between items-start mb-4">
+        <div>
+          <h2 className="text-2xl font-bold text-black dark:text-white">CryptVault</h2>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">Anonymous File Sharing Platform</p>
+        </div>
+        <button 
+          onClick={() => setreadMore(false)}
+          className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-xl p-1  rounded-full transition-colors"
+        >
+          ✕
+        </button>
+      </div>
+
+      <div className="space-y-6">
+        {/* About */}
+        <div>
+          <h3 className="text-lg font-semibold text-black dark:text-white mb-2">About</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+            CryptVault is a simple, secure file sharing platform designed for quick and anonymous file sharing. 
+            Users can create vaults using just a vault name and password without any email registration. 
+            It's perfect for sharing notes, documents, and other non-sensitive files with friends or colleagues.
+          </p>
+        </div>
+
+        {/* Key Features */}
+        <div>
+          <h3 className="text-lg font-semibold text-black dark:text-white mb-3">Key Features</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0"></div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">No email registration required</p>
+            </div>
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0"></div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">Vault-based access control</p>
+            </div>
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0"></div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">Secure file uploads via Cloudinary</p>
+            </div>
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0"></div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">Modern, responsive interface</p>
+            </div>
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0"></div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">Password-protected vaults</p>
+            </div>
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0"></div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">Quick file sharing & access</p>
+            </div>
+          </div>
+        </div>
+
+        {/* How it Works */}
+        <div>
+          <h3 className="text-lg font-semibold text-black dark:text-white mb-2">How it Works</h3>
+          <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+            <p>• Users create a vault with a unique name and password</p>
+            <p>• Files are uploaded and stored securely on Cloudinary</p>
+            <p>• File metadata and vault information stored in MongoDB</p>
+            <p>• Access granted only with correct vault credentials</p>
+            <p>• Clean, responsive interface built with React and Tailwind CSS</p>
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex gap-3 pt-4 border-t border-gray-200 dark:border-neutral-700">
+          <button 
+            onClick={() => window.open("https://cryptvault.vercel.app/", "_blank")}
+            className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-neutral-600 hover:bg-gray-50 dark:hover:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-lg transition-colors text-sm"
+          >
+            <span>Live Demo</span>
+            <ArrowUpRight size={16} />
+          </button>
+          <button 
+            onClick={() => window.open("https://github.com/suryakamal03/cryptvault", "_blank")}
+            className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-neutral-600 hover:bg-gray-50 dark:hover:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-lg transition-colors text-sm"
+          >
+            <Github size={16} />
+            <span>Source Code</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
            <div className="items-center animate-slide-up [animation-duration:.7s]">
           <div className="group rounded-xl w-full border-2 border-gray-400 dark:border-neutral-800 flex justify-center items-start flex-col px-5 py-6 m-2 hover:border-black dark:hover:border-neutral-400 transition-all duration-200 cursor-pointer" onClick={freadMore}>
         <div className="flex items-center justify-between w-full">
