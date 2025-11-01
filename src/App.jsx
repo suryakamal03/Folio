@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { FaHtml5,FaCss3Alt,FaNodeJs } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaReact } from "react-icons/fa6";
-import { SiMongodb,SiExpress,SiTailwindcss ,SiFirebase,SiCloudinary} from "react-icons/si";
+import { SiMongodb,SiExpress,SiTailwindcss ,SiFirebase,SiCloudinary,SiJavascript} from "react-icons/si";
 import { ThemeProvider } from "@/components/theme-provider"
 import { ModeToggle } from "./components/mode-toggle";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -138,7 +138,7 @@ function App() {
           <div className="mt-5 grid grid-row sm:grid-row md:grid-row gap-1">
 
           {/* Cryptvault  */}
-            {readMore && (
+            {/* {readMore && (
   <div className="fixed inset-0  bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
     <div className="bg-white dark:bg-neutral-900 rounded-xl p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto border border-gray-200 dark:border-neutral-700">
       <div className="flex justify-between items-start mb-4">
@@ -155,7 +155,7 @@ function App() {
       </div>
 
       <div className="space-y-6">
-        {/* About */}
+        About
         <div>
           <h3 className="text-lg font-semibold text-black dark:text-white mb-2">About</h3>
           <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
@@ -165,7 +165,7 @@ function App() {
           </p>
         </div>
 
-        {/* Key Features */}
+        Key Features
         <div>
           <h3 className="text-lg font-semibold text-black dark:text-white mb-3">Key Features</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -196,7 +196,7 @@ function App() {
           </div>
         </div>
 
-        {/* How it Works */}
+        How it Works
         <div>
           <h3 className="text-lg font-semibold text-black dark:text-white mb-2">How it Works</h3>
           <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
@@ -208,7 +208,7 @@ function App() {
           </div>
         </div>
 
-        {/* Action Buttons */}
+        Action Buttons
         <div className="flex gap-3 pt-4 border-t border-gray-200 dark:border-neutral-700">
           <button 
             onClick={() => window.open("https://cryptvault.vercel.app/", "_blank")}
@@ -248,7 +248,122 @@ function App() {
             <SiCloudinary className="text-gray-500 dark:text-white" />
           </div>
         </div>
+      </div> */}
+
+      {readMore && selectedProject === "collegeAdvisor" && (
+  <div className="fixed inset-0 bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+    <div className="bg-white dark:bg-neutral-900 rounded-xl p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto border border-gray-200 dark:border-neutral-700">
+      <div className="flex justify-between items-start mb-4">
+        <div>
+          <h2 className="text-2xl font-bold text-black dark:text-white">College Advisor Website</h2>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">AI-Powered College Recommendation Platform</p>
+        </div>
+        <button
+          onClick={() => setreadMore(false)}
+          className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-xl p-1 rounded-full transition-colors"
+        >
+          ✕
+        </button>
       </div>
+
+      <div className="space-y-6">
+        {/* About */}
+        <div>
+          <h3 className="text-lg font-semibold text-black dark:text-white mb-2">About</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+            The College Advisor Website helps students discover suitable colleges based on their marks,
+            preferences, and location. It leverages AI to suggest personalized college recommendations,
+            ensuring better decision-making for higher education choices.
+          </p>
+        </div>
+
+        {/* Key Features */}
+        <div>
+          <h3 className="text-lg font-semibold text-black dark:text-white mb-3">Key Features</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0"></div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">AI-powered college recommendations using Gemini API</p>
+            </div>
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0"></div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">Firebase used for form data and real-time responses</p>
+            </div>
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0"></div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">Responsive UI built using HTML, CSS, and JavaScript</p>
+            </div>
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0"></div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">Integrated Gemini API for smart, AI-driven insights</p>
+            </div>
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0"></div>
+              <p className="text-sm text-gray-700 dark:text-gray-300">Simple, student-friendly interface</p>
+            </div>
+          </div>
+        </div>
+
+        {/* How it Works */}
+        <div>
+          <h3 className="text-lg font-semibold text-black dark:text-white mb-2">How it Works</h3>
+          <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+            <p>• Students enter their 10th, 11th, and 12th marks and preferred location</p>
+            <p>• Data is stored and retrieved from Firebase in real-time</p>
+            <p>• Gemini API analyzes the input and provides personalized college suggestions</p>
+            <p>• Users receive a summary and college recommendations instantly</p>
+            <p>• The site is optimized for all devices using responsive design</p>
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex gap-3 pt-4 border-t border-gray-200 dark:border-neutral-700">
+          <button
+            onClick={() => window.open("https://college-advisor-s.vercel.app/", "_blank")}
+            className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-neutral-600 hover:bg-gray-50 dark:hover:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-lg transition-colors text-sm"
+          >
+            <span>Live Demo</span>
+            <ArrowUpRight size={16} />
+          </button>
+          <button
+            onClick={() => window.open("https://github.com/suryakamal03/college-advisor", "_blank")}
+            className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-neutral-600 hover:bg-gray-50 dark:hover:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-lg transition-colors text-sm"
+          >
+            <Github size={16} />
+            <span>Source Code</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+{/* Card section */}
+<div className="items-center animate-slide-up [animation-duration:.7s]">
+  <div
+    className="group rounded-xl w-full border-2 border-gray-400 dark:border-neutral-800 flex justify-center items-start flex-col px-5 py-6 m-2 hover:border-black dark:hover:border-neutral-400 transition-all duration-200 cursor-pointer"
+    onClick={() => { setSelectedProject("collegeAdvisor"); setreadMore(true); }}
+  >
+    <div className="flex items-center justify-between w-full">
+      <div className="flex">
+        <p className="text-black font-bold mb-3 dark:text-neutral-50">College Advisor Website</p>
+        <span className="flex bg-gray-100 justify-center rounded-2xl px-2 h-5 text-xs ml-2 dark:bg-neutral-800">Completed</span>
+      </div>
+      <ArrowUpRight className="w-5 transition-transform duration-200 group-hover:rotate-[45deg]" />
+    </div>
+    <p className="text-sm text-gray-700 dark:text-zinc-300 animate-slide-up [animation-duration:.8s]">
+      A smart web application that helps students find the best colleges based on their marks and preferences,
+      integrated with Gemini AI for personalized suggestions and Firebase for real-time data storage.
+    </p>
+    <div className="mt-2 flex gap-2">
+      <SiJavascript className="text-gray-500 dark:text-white" />
+      <SiFirebase className="text-gray-500 dark:text-white" />
+      <FaHtml5 className="text-gray-500 dark:text-white" />
+      <FaCss3Alt className="text-gray-500 dark:text-white" />
+    </div>
+  </div>
+</div>
+
 
       {/* new project add here */}
               
