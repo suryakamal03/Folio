@@ -10,7 +10,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { ModeToggle } from "./components/mode-toggle";
 import { RiTailwindCssFill } from "react-icons/ri";
 function App() {
-  const [readMore,setreadMore] = useState(false);
+  const [readMore, setreadMore] = useState(false);
+  const [selectedProject, setSelectedProject] = useState("");
+
   function freadMore(){
     setreadMore(true);
   }
@@ -319,14 +321,14 @@ function App() {
         {/* Action Buttons */}
         <div className="flex gap-3 pt-4 border-t border-gray-200 dark:border-neutral-700">
           <button
-            onClick={() => window.open("https://college-advisor-s.vercel.app/", "_blank")}
+            onClick={() => window.open("https://clg-advisr.vercel.app/", "_blank")}
             className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-neutral-600 hover:bg-gray-50 dark:hover:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-lg transition-colors text-sm"
           >
             <span>Live Demo</span>
             <ArrowUpRight size={16} />
           </button>
           <button
-            onClick={() => window.open("https://github.com/suryakamal03/college-advisor", "_blank")}
+            onClick={() => window.open("https://github.com/suryakamal03/clg-advisr", "_blank")}
             className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-neutral-600 hover:bg-gray-50 dark:hover:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-lg transition-colors text-sm"
           >
             <Github size={16} />
