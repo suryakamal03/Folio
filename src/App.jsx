@@ -194,6 +194,134 @@ function App() {
     </p>
   </div>
 </div>
+  {/* Chat Application Modal */}
+{readMore && selectedProject === "chatApp" && (
+  <div className="fixed inset-0 bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+    <div className="bg-white dark:bg-neutral-900 rounded-xl p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto border border-gray-200 dark:border-neutral-700">
+      <div className="flex justify-between items-start mb-4">
+        <div>
+          <h2 className="text-2xl font-semibold text-black dark:text-white">Real-time Chat Application</h2>
+          <p className="text-gray-600 dark:text-gray-400 text-sm font-normal">
+            Full-stack real-time messaging platform with Socket.io and email onboarding
+          </p>
+        </div>
+        <button
+          onClick={() => setreadMore(false)}
+          className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-xl p-1 rounded-full transition-colors"
+        >
+          ✕
+        </button>
+      </div>
+
+      <div className="space-y-6">
+        {/* About */}
+        <div>
+          <h3 className="text-lg font-semibold text-black dark:text-white mb-2">About</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm font-normal leading-relaxed">
+            This real-time Chat Application allows users to sign up, log in, and securely message each
+            other through a clean and modern interface. Built with the MERN stack and Socket.io for
+            live messaging, plus Resend for email onboarding, the app focuses on smooth conversations,
+            fast performance, and a polished user experience suitable for real-world use cases.
+          </p>
+        </div>
+
+        {/* Key Features */}
+        <div>
+          <h3 className="text-lg font-semibold text-black dark:text-white mb-3">Key Features</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0" />
+              <p className="text-sm font-normal text-gray-700 dark:text-gray-300">
+                Real-time one-to-one chat powered by Socket.io
+              </p>
+            </div>
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0" />
+              <p className="text-sm font-normal text-gray-700 dark:text-gray-300">
+                MERN stack (MongoDB, Express, React, Node.js) for a full-stack architecture
+              </p>
+            </div>
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0" />
+              <p className="text-sm font-normal text-gray-700 dark:text-gray-300">
+                Cloudinary integration for handling user avatars and media uploads
+              </p>
+            </div>
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0" />
+              <p className="text-sm font-normal text-gray-700 dark:text-gray-300">
+                Welcome email sent after signup using Resend
+              </p>
+            </div>
+            <div className="flex items-start space-x-2">
+              <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0" />
+              <p className="text-sm font-normal text-gray-700 dark:text-gray-300">
+                Responsive UI designed for both desktop and mobile users
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* How it Works */}
+        <div>
+          <h3 className="text-lg font-semibold text-black dark:text-white mb-2">How it Works</h3>
+          <div className="space-y-2 text-sm font-normal text-gray-700 dark:text-gray-300">
+            <p>• Users sign up using their email and create an account</p>
+            <p>• A welcome email is automatically sent via Resend after successful signup</p>
+            <p>• User data and chat messages are stored in MongoDB</p>
+            <p>• Express/Node.js handle authentication, REST APIs, and Socket.io server setup</p>
+            <p>• Socket.io maintains a persistent connection for instant message delivery</p>
+            <p>• React.js powers the real-time chat interface with smooth interactions</p>
+            <p>• Cloudinary manages image/media uploads used inside the app</p>
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex gap-3 pt-4 border-t border-gray-200 dark:border-neutral-700">
+          <button
+            onClick={() => window.open("https://chat-application-ten-zeta.vercel.app/", "_blank")}
+            className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-neutral-600 hover:bg-gray-50 dark:hover:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-lg transition-colors text-sm font-medium"
+          >
+            <span>Live Demo</span>
+            <ArrowUpRight size={16} />
+          </button>
+          <button
+            onClick={() => window.open("https://github.com/suryakamal03/Chat-Application", "_blank")}
+            className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-neutral-600 hover:bg-gray-50 dark:hover:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-lg transition-colors text-sm font-medium"
+          >
+            <Github size={16} />
+            <span>Source Code</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+{/* Chat Application Card */}
+<div className="items-center animate-slide-up [animation-duration:.7s]">
+  <div
+    className="group rounded-xl w-150 border-1 border-gray-200 dark:border-neutral-800 flex justify-center items-start flex-col px-3 py-5 m-3 hover:border-black dark:hover:border-neutral-400 transition-all duration-200 cursor-pointer"
+    onClick={() => { setSelectedProject("chatApp"); setreadMore(true); }}
+  >
+    <div className="flex items-center justify-between w-full">
+      <div className="flex">
+        <p className="text-black font-semibold text-sm mb-3 dark:text-neutral-50">
+          Real-time Chat Application
+        </p>
+        <span className="flex bg-gray-100 justify-center rounded-xl px-1 h-5 text-xs font-medium ml-2 dark:bg-neutral-800">
+          Completed
+        </span>
+      </div>
+      <ArrowUpRight className="w-4 transition-transform duration-200 group-hover:rotate-[45deg]" />
+    </div>
+    <p className="text-sm font-normal text-gray-700 dark:text-gray-300 animate-slide-up [animation-duration:.8s]">
+      A full-stack real-time chat application built with MongoDB, Express/Node.js, React.js,
+      and Socket.io, featuring Cloudinary-powered media handling and Resend integration for
+      automatic welcome emails after signup.
+    </p>
+  </div>
+</div>
 
 
       {/* new project add here */}

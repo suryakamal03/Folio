@@ -138,7 +138,11 @@
   animation: slide-up .6s ease-out forwards;
 }
 @layer base {
-  ::selection {
-    @apply bg-gray-100 text-gray-900;
+  :root ::selection {
+    @apply bg-black text-white;
+  }
+
+  .dark ::selection {
+    @apply bg-white text-black;
   }
 }
