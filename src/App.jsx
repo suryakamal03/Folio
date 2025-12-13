@@ -363,65 +363,123 @@ function App() {
 
           {/* Achievements Section - IMPROVED */}
           <div>
-            <p className="text-lg font-semibold text-gray-950 pointer-events-none dark:text-neutral-300 animate-slide-up [animation-duration:.65s]">
-              Achievements
+  <p className="text-lg font-semibold text-gray-950 pointer-events-none dark:text-neutral-300 animate-slide-up [animation-duration:.65s]">
+    Achievements
+  </p>
+
+  <div className="mt-5 space-y-3">
+    {/* Smart India Hackathon */}
+    <div
+      className={`group border border-gray-200 dark:border-neutral-800 hover:border-black dark:hover:border-neutral-400 cursor-pointer transition-all duration-500 ${
+        expandedAchievement === "sih" ? "rounded-t-xl rounded-b-xl" : "rounded-xl"
+      }`}
+      onClick={() => setExpandedAchievement(expandedAchievement === "sih" ? null : "sih")}
+    >
+      <div className="flex justify-between items-start p-4 gap-3">
+        <div className="flex-1 min-w-0">
+          <p className="text-black font-semibold text-sm dark:text-neutral-50 leading-tight">
+            Smart India Hackathon
+          </p>
+          <p className="text-xs sm:text-sm font-normal text-gray-600 dark:text-gray-400 mt-1">
+            St. Joseph's College of Engineering
+          </p>
+        </div>
+        <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+          <div className="text-right">
+            <p className="text-[10px] sm:text-xs font-normal text-gray-600 dark:text-gray-400 whitespace-nowrap">
+              9th Dec, 2025
             </p>
-
-            <div className="mt-5">
-              <div
-                className={`group border border-gray-200 dark:border-neutral-800 hover:border-black dark:hover:border-neutral-400 cursor-pointer transition-all duration-500 ${
-                  expandedAchievement === "research" ? "rounded-t-xl rounded-b-xl" : "rounded-xl"
-                }`}
-                onClick={() => setExpandedAchievement(expandedAchievement === "research" ? null : "research")}
-              >
-                <div className="flex justify-between items-start p-4 gap-3">
-                  <div className="flex-1 min-w-0">
-                    <p className="text-black font-semibold text-sm dark:text-neutral-50 leading-tight">
-                      Mind Over Machine AI Hackathon
-                    </p>
-                    <p className="text-xs sm:text-sm font-normal text-gray-600 dark:text-gray-400 mt-1">
-                      Loyola College
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
-                    <div className="text-right">
-                      <p className="text-[10px] sm:text-xs font-normal text-gray-600 dark:text-gray-400 whitespace-nowrap">
-                        2nd Dec, 2025
-                      </p>
-                      <p className="text-[10px] sm:text-xs font-semibold text-gray-700 dark:text-gray-300 mt-0.5">
-                        1st Place
-                      </p>
-                    </div>
-                    <div className="relative w-5 h-5 flex-shrink-0">
-                      <Plus
-                        className={`absolute w-5 h-5 text-gray-600 dark:text-gray-400 transition-all duration-500 ${
-                          expandedAchievement === "research" ? "rotate-90 opacity-0" : "rotate-0 opacity-100"
-                        }`}
-                      />
-                      <Minus
-                        className={`absolute w-5 h-5 text-gray-600 dark:text-gray-400 transition-all duration-500 ${
-                          expandedAchievement === "research" ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"
-                        }`}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  className={`overflow-hidden transition-all duration-700 ease-in-out ${
-                    expandedAchievement === "research" ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                  }`}
-                >
-                  <div className="px-4 pb-4 pt-0">
-                    <p className="text-sm font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
-                      Developed a smart finance-tracking web app where AI analyzes user expenses and provides
-                      personalized money-management suggestions.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <p className="text-[10px] sm:text-xs font-semibold text-gray-700 dark:text-gray-300 mt-0.5">
+              1st Place
+            </p>
           </div>
+          <div className="relative w-5 h-5 flex-shrink-0">
+            <Plus
+              className={`absolute w-5 h-5 text-gray-600 dark:text-gray-400 transition-all duration-500 ${
+                expandedAchievement === "sih" ? "rotate-90 opacity-0" : "rotate-0 opacity-100"
+              }`}
+            />
+            <Minus
+              className={`absolute w-5 h-5 text-gray-600 dark:text-gray-400 transition-all duration-500 ${
+                expandedAchievement === "sih" ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"
+              }`}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={`overflow-hidden transition-all duration-700 ease-in-out ${
+          expandedAchievement === "sih" ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-4 pb-4 pt-0">
+          <p className="text-sm font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
+            <span className="font-medium">Problem Statement:</span> Fitness and Sports (SIH25129)
+            <br />
+            <span className="mt-2 inline-block">
+              Developed an AI fitness coaching app with live interaction, nutrition tracking, and real-time messaging and calling features with an AI fitness coach.
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Mind Over Machine AI Hackathon */}
+    <div
+      className={`group border border-gray-200 dark:border-neutral-800 hover:border-black dark:hover:border-neutral-400 cursor-pointer transition-all duration-500 ${
+        expandedAchievement === "research" ? "rounded-t-xl rounded-b-xl" : "rounded-xl"
+      }`}
+      onClick={() => setExpandedAchievement(expandedAchievement === "research" ? null : "research")}
+    >
+      <div className="flex justify-between items-start p-4 gap-3">
+        <div className="flex-1 min-w-0">
+          <p className="text-black font-semibold text-sm dark:text-neutral-50 leading-tight">
+            Mind Over Machine AI Hackathon
+          </p>
+          <p className="text-xs sm:text-sm font-normal text-gray-600 dark:text-gray-400 mt-1">
+            Loyola College
+          </p>
+        </div>
+        <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+          <div className="text-right">
+            <p className="text-[10px] sm:text-xs font-normal text-gray-600 dark:text-gray-400 whitespace-nowrap">
+              2nd Dec, 2024
+            </p>
+            <p className="text-[10px] sm:text-xs font-semibold text-gray-700 dark:text-gray-300 mt-0.5">
+              1st Place
+            </p>
+          </div>
+          <div className="relative w-5 h-5 flex-shrink-0">
+            <Plus
+              className={`absolute w-5 h-5 text-gray-600 dark:text-gray-400 transition-all duration-500 ${
+                expandedAchievement === "research" ? "rotate-90 opacity-0" : "rotate-0 opacity-100"
+              }`}
+            />
+            <Minus
+              className={`absolute w-5 h-5 text-gray-600 dark:text-gray-400 transition-all duration-500 ${
+                expandedAchievement === "research" ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"
+              }`}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={`overflow-hidden transition-all duration-700 ease-in-out ${
+          expandedAchievement === "research" ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-4 pb-4 pt-0">
+          <p className="text-sm font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
+            Developed a smart finance-tracking web app where AI analyzes user expenses and provides
+            personalized money-management suggestions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
           <div className="border-t border-gray-200 dark:border-neutral-700 w-full mt-5 mb-5"></div>
 
