@@ -4,6 +4,9 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "./components/mode-toggle";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
+import { BorderBeam } from "@/components/ui/border-beam"
+import "./App.css"
 
 function App() {
   const [readMore, setreadMore] = useState(false);
@@ -17,6 +20,7 @@ function App() {
           {/* Header Section */}
           <div className="flex justify-between items-center">
             <div className="flex items-center animate-slide-up">
+              
               <Avatar className="h-10 w-10 sm:h-12 sm:w-12">
                 <AvatarImage src="../SURYA.jpg" />
                 <AvatarFallback>SK</AvatarFallback>
@@ -86,11 +90,10 @@ function App() {
               </div>
               <Tooltip>
                 <TooltipTrigger>
-                  <ModeToggle
-                    size={18}
-                    strokeWidth={1.5}
-                    className="text-gray-500 hover:text-black cursor-pointer bg-none border-none animate-slide-up [animation-duration:.6s]"
+                  <AnimatedThemeToggler
+                    className="text-gray-500 hover:text-black cursor-pointer bg-none border-none animate-slide-up [animation-duration:.6s] dark:hover:text-white"
                   />
+
                 </TooltipTrigger>
               </Tooltip>
             </div>
@@ -140,13 +143,13 @@ function App() {
               {/* College Advisor Modal */}
               {readMore && selectedProject === "collegeAdvisor" && (
                 <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-3 sm:p-4">
-                  <div className="bg-white dark:bg-neutral-900 rounded-xl p-4 sm:p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto border border-gray-200 dark:border-neutral-700">
+                  <div className="bg-white dark:bg-neutral-900 rounded-xl p-4 sm:p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto hide-scrollbar border border-gray-200 dark:border-neutral-700">
                     <div className="flex justify-between items-start mb-4">
                       <div className="flex-1 pr-2">
-                        <h2 className="text-xl sm:text-2xl font-semibold text-black dark:text-white">
+                        <h2 className="text-xl sm:text-2xl font-semibold text-black dark:text-white text-left">
                           College Advisor Website
                         </h2>
-                        <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-normal mt-1">
+                        <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-normal mt-1 text-left">
                           AI-Powered College Recommendation Platform
                         </p>
                       </div>
@@ -160,8 +163,8 @@ function App() {
 
                     <div className="space-y-4 sm:space-y-6">
                       <div>
-                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-2">About</h3>
-                        <p className="text-gray-700 dark:text-gray-300 text-sm font-normal leading-relaxed">
+                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-2 text-left">About</h3>
+                        <p className="text-gray-700 dark:text-gray-300 text-sm font-normal leading-relaxed text-left">
                           The College Advisor Website helps students discover suitable colleges based on their marks,
                           preferences, and location. It leverages AI to suggest personalized college recommendations,
                           ensuring better decision-making for higher education choices.
@@ -169,7 +172,7 @@ function App() {
                       </div>
 
                       <div>
-                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-3">Key Features</h3>
+                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-3 text-left">Key Features</h3>
                         <div className="grid grid-cols-1 gap-2 sm:gap-3">
                           {[
                             "AI-powered college recommendations using Gemini API",
@@ -187,8 +190,8 @@ function App() {
                       </div>
 
                       <div>
-                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-2">How it Works</h3>
-                        <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm font-normal text-gray-700 dark:text-gray-300">
+                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-2 text-left">How it Works</h3>
+                        <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm font-normal text-gray-700 dark:text-gray-300 text-left">
                           <p>• Students enter their 10th, 11th, and 12th marks and preferred location</p>
                           <p>• Data is stored and retrieved from Firebase in real-time</p>
                           <p>• Gemini API analyzes the input and provides personalized college suggestions</p>
@@ -248,13 +251,13 @@ function App() {
               {/* Chat Application Modal */}
               {readMore && selectedProject === "chatApp" && (
                 <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-3 sm:p-4">
-                  <div className="bg-white dark:bg-neutral-900 rounded-xl p-4 sm:p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto border border-gray-200 dark:border-neutral-700">
+                  <div className="bg-white dark:bg-neutral-900 rounded-xl p-4 sm:p-6 w-full max-w-2xl max-h-[90vh]  border border-gray-200 dark:border-neutral-700 overflow-y-auto hide-scrollbar">
                     <div className="flex justify-between items-start mb-4">
                       <div className="flex-1 pr-2">
-                        <h2 className="text-xl sm:text-2xl font-semibold text-black dark:text-white">
+                        <h2 className="text-xl sm:text-2xl font-semibold text-black dark:text-white text-left">
                           Real-time Chat Application
                         </h2>
-                        <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-normal mt-1">
+                        <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-normal mt-1 text-left">
                           Full-stack real-time messaging platform with Socket.io and email onboarding
                         </p>
                       </div>
@@ -268,8 +271,8 @@ function App() {
 
                     <div className="space-y-4 sm:space-y-6">
                       <div>
-                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-2">About</h3>
-                        <p className="text-gray-700 dark:text-gray-300 text-sm font-normal leading-relaxed">
+                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-2 text-left">About</h3>
+                        <p className="text-gray-700 dark:text-gray-300 text-sm font-normal leading-relaxed text-left">
                           This real-time Chat Application allows users to sign up, log in, and securely message each
                           other through a clean and modern interface. Built with the MERN stack and Socket.io for
                           live messaging, plus Resend for email onboarding, the app focuses on smooth conversations,
@@ -278,7 +281,7 @@ function App() {
                       </div>
 
                       <div>
-                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-3">Key Features</h3>
+                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-3 text-left">Key Features</h3>
                         <div className="grid grid-cols-1 gap-2 sm:gap-3">
                           {[
                             "Real-time one-to-one chat powered by Socket.io",
@@ -296,8 +299,8 @@ function App() {
                       </div>
 
                       <div>
-                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-2">How it Works</h3>
-                        <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm font-normal text-gray-700 dark:text-gray-300">
+                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-2 text-left">How it Works</h3>
+                        <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm font-normal text-gray-700 dark:text-gray-300 text-left">
                           <p>• Users sign up using their email and create an account</p>
                           <p>• A welcome email is automatically sent via Resend after successful signup</p>
                           <p>• User data and chat messages are stored in MongoDB</p>
