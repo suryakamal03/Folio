@@ -120,10 +120,10 @@ function App() {
               Skills
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
-              {["Javascript", "Node.js", "Express.js", "MongoDB", "React", "Tailwind CSS", "Firebase"].map((skill, idx) => (
+              {["Javascript","Typescript","Node.js", "Express.js", "MongoDB", "React", "Tailwind CSS", "Firebase"].map((skill, idx) => (
                 <span
                   key={skill}
-                  className="text-xs font-medium text-white bg-black px-3 py-1.5 rounded-full animate-slide-up dark:bg-neutral-800"
+                  className="text-[10px] font-bold text-white bg-black px-3 py-1.5 rounded-full animate-slide-up dark:bg-neutral-800"
                   style={{ animationDuration: `${0.7 + idx * 0.1}s` }}
                 >
                   {skill}
