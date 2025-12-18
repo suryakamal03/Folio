@@ -221,6 +221,121 @@ function App() {
                 </div>
               )}
 
+              {/* Ontrackr Modal */}
+              {readMore && selectedProject === "ontrackr" && (
+                <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-3 sm:p-4">
+                  <div className="bg-white dark:bg-neutral-900 rounded-xl p-4 sm:p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto hide-scrollbar border border-gray-200 dark:border-neutral-700">
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="flex-1 pr-2">
+                        <h2 className="text-xl sm:text-2xl font-semibold text-black dark:text-white text-left">
+                          Ontrackr
+                        </h2>
+                        <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-normal mt-1 text-left">
+                          Modern project management platform for developer teams
+                        </p>
+                      </div>
+                      <button
+                        onClick={() => setreadMore(false)}
+                        className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl sm:text-xl p-1 rounded-full transition-colors flex-shrink-0"
+                      >
+                        ✕
+                      </button>
+                    </div>
+
+                    <div className="space-y-4 sm:space-y-6">
+                      <div>
+                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-2 text-left">Overview</h3>
+                        <p className="text-gray-700 dark:text-gray-300 text-sm font-normal leading-relaxed text-left">
+                          Ontrackr is a project management web application designed specifically for developer teams. 
+                          It addresses the challenge of coordinating distributed teams and tracking project progress in real-time. 
+                          The platform combines intuitive task management with AI-powered assistance to reduce manual overhead and 
+                          improve team visibility. Built with a scalable architecture and clean user experience, Ontrackr streamlines 
+                          workflows from project creation to task completion while maintaining awareness of team capacity and project health.
+                        </p>
+                      </div>
+
+                      <div>
+                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-3 text-left">Core Features</h3>
+                        <div className="grid grid-cols-1 gap-2 sm:gap-3">
+                          {[
+                            "Firebase Authentication with Email/Password and Google Sign-In",
+                            "User profile management with persistent state in Firestore",
+                            "Unified dashboard for creating and managing projects",
+                            "Role-based member invitations and access control",
+                            "Task creation with manual or AI-assisted assignment",
+                            "Real-time project overview showing team progress and pending work",
+                            "Project-aware AI chatbot embedded in the dashboard for contextual assistance",
+                            "Automated email reminders and risk alerts for task deadlines",
+                            "Responsive component architecture built with Next.js and Tailwind CSS"
+                          ].map((feature, idx) => (
+                            <div key={idx} className="flex items-start space-x-2">
+                              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
+                              <p className="text-xs sm:text-sm font-normal text-gray-700 dark:text-gray-300">{feature}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div>
+                        <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-2 text-left">Technical Highlights</h3>
+                        <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm font-normal text-gray-700 dark:text-gray-300 text-left">
+                          <p>• TypeScript for type safety across the entire application stack</p>
+                          <p>• Firestore real-time listeners for instant project and task updates</p>
+                          <p>• Reusable component library for consistent UI and rapid feature development</p>
+                          <p>• Modular architecture separating authentication, project, and task logic</p>
+                          <p>• Optimistic UI updates for improved perceived performance</p>
+                          <p>• Context-aware AI integration using project data and team composition</p>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-4 border-t border-gray-200 dark:border-neutral-700">
+                        <button
+                          onClick={() => window.open("#", "_blank")}
+                          className="flex items-center justify-center space-x-2 px-4 py-2.5 sm:py-2 border border-gray-300 dark:border-neutral-600 hover:bg-gray-50 dark:hover:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-lg transition-colors text-sm font-medium"
+                        >
+                          <span>Live Demo</span>
+                          <ArrowUpRight size={16} />
+                        </button>
+                        <button
+                          onClick={() => window.open("#", "_blank")}
+                          className="flex items-center justify-center space-x-2 px-4 py-2.5 sm:py-2 border border-gray-300 dark:border-neutral-600 hover:bg-gray-50 dark:hover:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-lg transition-colors text-sm font-medium"
+                        >
+                          <Github size={16} />
+                          <span>Source Code</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Ontrackr Card */}
+              <div className="animate-slide-up [animation-duration:.7s]">
+                <div
+                  className="group rounded-xl border border-gray-200 dark:border-neutral-800 flex justify-center items-start flex-col p-4 sm:px-3 sm:py-5 hover:border-black dark:hover:border-neutral-400 transition-all duration-200 cursor-pointer"
+                  onClick={() => {
+                    setSelectedProject("ontrackr");
+                    setreadMore(true);
+                  }}
+                >
+                  <div className="flex items-start justify-between w-full mb-3">
+                    <div className="flex flex-col sm:flex-row sm:items-center flex-1 gap-2">
+                      <p className="text-black font-semibold text-sm dark:text-neutral-50">
+                        Ontrackr
+                      </p>
+                      <span className="flex bg-gray-100 justify-center rounded-xl px-2 py-0.5 h-5 text-xs font-medium dark:bg-neutral-800 w-fit">
+                        In Progress
+                      </span>
+                    </div>
+                    <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:rotate-[45deg] flex-shrink-0 ml-2" />
+                  </div>
+                  <p className="text-sm font-normal text-gray-700 dark:text-gray-300 leading-relaxed">
+                    A TypeScript-powered project management platform with Firebase authentication, real-time collaboration, 
+                    AI-assisted task assignment, and automated notifications for developer teams.
+                  </p>
+                </div>
+              </div>
+
               {/* College Advisor Card - IMPROVED */}
               <div className="animate-slide-up [animation-duration:.7s]">
                 <div
@@ -248,8 +363,8 @@ function App() {
                 </div>
               </div>
 
-              {/* Chat Application Modal */}
-              {readMore && selectedProject === "chatApp" && (
+              {/* Chat Application Modal - COMMENTED OUT */}
+              {/* {readMore && selectedProject === "chatApp" && (
                 <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-3 sm:p-4">
                   <div className="bg-white dark:bg-neutral-900 rounded-xl p-4 sm:p-6 w-full max-w-2xl max-h-[90vh]  border border-gray-200 dark:border-neutral-700 overflow-y-auto hide-scrollbar">
                     <div className="flex justify-between items-start mb-4">
@@ -330,10 +445,10 @@ function App() {
                     </div>
                   </div>
                 </div>
-              )}
+              )} */}
 
-              {/* Chat Application Card - IMPROVED */}
-              <div className="animate-slide-up [animation-duration:.7s]">
+              {/* Chat Application Card - COMMENTED OUT */}
+              {/* <div className="animate-slide-up [animation-duration:.7s]">
                 <div
                   className="group rounded-xl border border-gray-200 dark:border-neutral-800 flex justify-center items-start flex-col p-4 sm:px-3 sm:py-5 hover:border-black dark:hover:border-neutral-400 transition-all duration-200 cursor-pointer"
                   onClick={() => {
@@ -358,7 +473,7 @@ function App() {
                     automatic welcome emails after signup.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
