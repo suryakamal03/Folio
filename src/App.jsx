@@ -120,7 +120,7 @@ function App() {
               Skills
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
-              {["Javascript","Typescript","Node.js", "Express.js", "MongoDB", "React", "Tailwind CSS", "Firebase"].map((skill, idx) => (
+              {["Javascript","Typescript","Node.js", "Express.js", "React", "Tailwind CSS","Next.js","MongoDB", "Firebase"].map((skill, idx) => (
                 <span
                   key={skill}
                   className="text-[10px] font-bold text-white bg-black px-3 py-1.5 rounded-full animate-slide-up dark:bg-neutral-800"
@@ -142,8 +142,14 @@ function App() {
             <div className="mt-5 space-y-3">
               {/* College Advisor Modal */}
               {readMore && selectedProject === "collegeAdvisor" && (
-                <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-3 sm:p-4">
-                  <div className="bg-white dark:bg-neutral-900 rounded-xl p-4 sm:p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto hide-scrollbar border border-gray-200 dark:border-neutral-700">
+                <div 
+                  className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-3 sm:p-4"
+                  onClick={() => setreadMore(false)}
+                >
+                  <div 
+                    className="bg-white dark:bg-neutral-900 rounded-xl p-4 sm:p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto hide-scrollbar border border-gray-200 dark:border-neutral-700"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <div className="flex justify-between items-start mb-4">
                       <div className="flex-1 pr-2">
                         <h2 className="text-xl sm:text-2xl font-semibold text-black dark:text-white text-left">
@@ -223,8 +229,14 @@ function App() {
 
               {/* Ontrackr Modal */}
               {readMore && selectedProject === "ontrackr" && (
-                <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-3 sm:p-4">
-                  <div className="bg-white dark:bg-neutral-900 rounded-xl p-4 sm:p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto hide-scrollbar border border-gray-200 dark:border-neutral-700">
+                <div 
+                  className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-3 sm:p-4"
+                  onClick={() => setreadMore(false)}
+                >
+                  <div 
+                    className="bg-white dark:bg-neutral-900 rounded-xl p-4 sm:p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto hide-scrollbar border border-gray-200 dark:border-neutral-700"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <div className="flex justify-between items-start mb-4">
                       <div className="flex-1 pr-2">
                         <h2 className="text-xl sm:text-2xl font-semibold text-black dark:text-white text-left">
