@@ -43,6 +43,7 @@ function App() {
     setSelectedProject(projectName);
     setViewingProject(true);
     window.history.pushState({ project: projectName }, '', `#${projectName}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Function to navigate back
@@ -119,6 +120,51 @@ function App() {
                       </div>
                     </div>
 
+                    <div>
+                      <h3 className="text-lg font-semibold text-black dark:text-white mb-3">Tech Stack</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {/* HTML */}
+                        <div className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700">
+                          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/>
+                          </svg>
+                          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">HTML</span>
+                        </div>
+
+                        {/* CSS */}
+                        <div className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700">
+                          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/>
+                          </svg>
+                          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">CSS</span>
+                        </div>
+
+                        {/* JavaScript */}
+                        <div className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700">
+                          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
+                          </svg>
+                          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">JavaScript</span>
+                        </div>
+
+                        {/* Firebase */}
+                        <div className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700">
+                          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 00-.96 0L3.53 17.984z"/>
+                          </svg>
+                          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Firebase</span>
+                        </div>
+
+                        {/* Gemini API */}
+                        <div className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700">
+                          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0L9.798 2.202 4.5 7.5l-2.202 2.298L0 12l2.298 2.202L4.5 16.5l5.298 5.298L12 24l2.202-2.202L19.5 16.5l2.202-2.298L24 12l-2.298-2.202L19.5 7.5l-5.298-5.298L12 0zm0 3.879l1.386 1.386-3.465 3.465-1.386-1.386L12 3.879zm-1.515 6.061l3.465-3.465 1.386 1.386-3.465 3.465-1.386-1.386zm-1.515 1.515l1.386 1.386-3.465 3.465-1.386-1.386 3.465-3.465zm6.06 0l3.465 3.465-1.386 1.386-3.465-3.465 1.386-1.386zm-4.545 4.545l1.386 1.386-3.465 3.465-1.386-1.386 3.465-3.465zm6.06 0l3.465 3.465L20.121 12l-3.465-3.465-1.386 1.386z"/>
+                          </svg>
+                          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">Gemini API</span>
+                        </div>
+                      </div>
+                    </div>
+
                     <div className="flex flex-col sm:flex-row gap-3 pt-6 border-t border-gray-200 dark:border-neutral-700">
                       <button
                         onClick={() => window.open("https://clg-advisr.vercel.app/", "_blank")}
@@ -153,6 +199,29 @@ function App() {
                   </div>
 
                   <div className="space-y-6 mt-8">
+                    <div 
+                      className="mb-6 overflow-hidden rounded-xl border-2 border-gray-300 dark:border-neutral-600 shadow-2xl bg-gray-100 dark:bg-neutral-900 cursor-pointer transition-all hover:shadow-3xl hover:scale-[1.01]"
+                      onClick={() => window.open("https://bundle-lp.vercel.app/", "_blank")}
+                    >
+                      <div className="bg-gray-200 dark:bg-neutral-800 px-4 py-2.5 flex items-center gap-2 border-b border-gray-300 dark:border-neutral-700">
+                        <div className="flex gap-2">
+                          <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                          <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                          <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div className="flex-1 text-center text-xs text-gray-600 dark:text-gray-400 font-medium">
+                          bundle-lp.vercel.app
+                        </div>
+                      </div>
+                      <div className="relative w-full bg-white dark:bg-black overflow-hidden">
+                        <img 
+                          src="/bundle img.jpeg"
+                          alt="Bundle Project Management Platform Preview"
+                          className="w-full h-auto object-cover object-top"
+                        />
+                      </div>
+                    </div>
+
                     <div>
                       <h3 className="text-lg font-semibold text-black dark:text-white mb-3">Overview</h3>
                       <p className="text-gray-700 dark:text-gray-300 text-sm font-normal leading-relaxed">
@@ -164,13 +233,14 @@ function App() {
                       <h3 className="text-lg font-semibold text-black dark:text-white mb-3">Core Features</h3>
                       <div className="grid grid-cols-1 gap-3">
                         {[
-                          "Firebase Authentication with Email/Password and Google Sign-In",
-                          "User profile management with persistent state in Firestore",
-                          "Task creation with manual or AI-assisted assignment",
-                          "Real-time project overview showing team progress and pending work",
-                          "Project-aware AI chatbot embedded in the dashboard for contextual assistance",
-                          "Automated email reminders and risk alerts for task deadlines",
-                          "Responsive component architecture built with Next.js and Tailwind CSS"
+                          "Multi-Project Workspace - Organize and manage multiple projects with team collaboration and role-based access control",
+                          "Real-Time Collaboration - Instant updates and notifications using Socket.IO for seamless team synchronization",
+                          "GitHub Integration - Automatic commit tracking and development activity monitoring with webhook support",
+                          "AI Task Assistant - Smart task assignment, deadline suggestions, and project-specific help powered by Gemini AI",
+                          "Smart Notifications - Automated email alerts, in-app notifications, and risk warnings for deadlines and overdue tasks",
+                          "Advanced Task Management - Priority-based organization with status tracking, filtering, and visual progress indicators",
+                          "Team Activity Feed - Real-time dashboard showing commits, task updates, and team contributions",
+                          "Automated Monitoring - Background jobs for deadline tracking and automated notification triggers"
                         ].map((feature, idx) => (
                           <div key={idx} className="flex items-start space-x-2">
                             <div className="w-2 h-2 bg-neutral-500 dark:bg-stone-50 rounded-full mt-2 flex-shrink-0"></div>
@@ -233,14 +303,14 @@ function App() {
 
                     <div className="flex flex-col sm:flex-row gap-3 pt-6 border-t border-gray-200 dark:border-neutral-700">
                       <button
-                        onClick={() => window.open("#", "_blank")}
+                        onClick={() => window.open("https://bundle-lp.vercel.app/", "_blank")}
                         className="flex items-center justify-center space-x-2 px-4 py-2.5 border border-gray-300 dark:border-neutral-600 hover:bg-gray-50 dark:hover:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-lg transition-colors text-sm font-medium"
                       >
                         <span>Live Demo</span>
                         <ArrowUpRight size={16} />
                       </button>
                       <button
-                        onClick={() => window.open("#", "_blank")}
+                        onClick={() => window.open("https://github.com/suryakamal03/Bundle", "_blank")}
                         className="flex items-center justify-center space-x-2 px-4 py-2.5 border border-gray-300 dark:border-neutral-600 hover:bg-gray-50 dark:hover:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-lg transition-colors text-sm font-medium"
                       >
                         <Github size={16} />
