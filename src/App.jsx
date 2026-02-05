@@ -53,7 +53,7 @@ function App() {
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className="flex justify-center px-4 sm:px-6 md:px-10 py-6 sm:py-10">
+      <div className="flex justify-center px-4 sm:px-6 md:px-10">
         <div className="flex flex-col h-full w-full max-w-[640px]">
           {viewingProject ? (
             // Project Detail View
@@ -199,29 +199,6 @@ function App() {
                   </div>
 
                   <div className="space-y-6 mt-8">
-                    <div 
-                      className="mb-6 overflow-hidden rounded-xl border-2 border-gray-300 dark:border-neutral-600 shadow-2xl bg-gray-100 dark:bg-neutral-900 cursor-pointer transition-all hover:shadow-3xl hover:scale-[1.01]"
-                      onClick={() => window.open("https://bundle-lp.vercel.app/", "_blank")}
-                    >
-                      <div className="bg-gray-200 dark:bg-neutral-800 px-4 py-2.5 flex items-center gap-2 border-b border-gray-300 dark:border-neutral-700">
-                        <div className="flex gap-2">
-                          <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                          <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                          <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                        </div>
-                        <div className="flex-1 text-center text-xs text-gray-600 dark:text-gray-400 font-medium">
-                          bundle-lp.vercel.app
-                        </div>
-                      </div>
-                      <div className="relative w-full bg-white dark:bg-black overflow-hidden">
-                        <img 
-                          src="/bundle img.jpeg"
-                          alt="Bundle Project Management Platform Preview"
-                          className="w-full h-auto object-cover object-top"
-                        />
-                      </div>
-                    </div>
-
                     <div>
                       <h3 className="text-lg font-semibold text-black dark:text-white mb-3">Overview</h3>
                       <p className="text-gray-700 dark:text-gray-300 text-sm font-normal leading-relaxed">
